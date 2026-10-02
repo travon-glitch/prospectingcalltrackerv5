@@ -1,0 +1,402 @@
+==================================================================
+npm run verify  =  npm run lint && npm run test && npm run test:e2e
+Run in 3 separate invocations only because the combined run exceeds
+this session's single-command time budget; each stage's real exit
+code is shown and each was 0.
+==================================================================
+
+---------------- STAGE 1: npm run lint (exit 0) ----------------
+
+> prospecting-call-tracker@0.1.0 lint
+> eslint src tests eslint.config.js playwright.config.js vitest.config.js
+
+
+/home/claude/src/core/fields.js
+  1:10  warning  '$' is defined but never used  no-unused-vars
+
+/home/claude/src/core/permissions.js
+   1:10  warning  'builtIn' is defined but never used              no-unused-vars
+  83:48  warning  'CAP_LABEL' is assigned a value but never used   no-unused-vars
+  83:78  warning  'CAP_GROUPS' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/core/router.js
+  22:199  warning  'e' is defined but never used  no-unused-vars
+  22:201  warning  Empty block statement          no-empty
+
+/home/claude/src/core/session.js
+  16:10  warning  'outcome' is defined but never used  no-unused-vars
+
+/home/claude/src/data/persist.js
+  12:218  warning  Empty block statement  no-empty
+
+/home/claude/src/data/repo-supabase.js
+  1676:16  warning  '_args' is defined but never used  no-unused-vars
+
+/home/claude/src/data/seed.js
+  3:10  warning  'audit' is defined but never used      no-unused-vars
+  6:10  warning  'nextFu' is defined but never used     no-unused-vars
+  7:23  warning  'pipelines' is defined but never used  no-unused-vars
+
+/home/claude/src/features/activity.js
+    8:48  warning  'smsHref' is defined but never used            no-unused-vars
+   11:23  warning  'reassign' is defined but never used           no-unused-vars
+  132:33  warning  'embedded' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/features/admin.js
+  28:58  warning  'memberName' is defined but never used  no-unused-vars
+
+/home/claude/src/features/campaigns.js
+   5:41  warning  'smsHref' is defined but never used   no-unused-vars
+  10:10  warning  'editCard' is defined but never used  no-unused-vars
+  10:20  warning  'logReply' is defined but never used  no-unused-vars
+
+/home/claude/src/features/crm.js
+   31:81  warning  Unnecessary escape character: \-          no-useless-escape
+  159:43  warning  'why' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/features/exports.js
+  18:10  warning  '$' is defined but never used  no-unused-vars
+
+/home/claude/src/features/imports.js
+  53:10  warning  'e' is defined but never used  no-unused-vars
+
+/home/claude/src/features/leads.js
+  2:47  warning  'money' is defined but never used  no-unused-vars
+
+/home/claude/src/features/stats.js
+   7:10   warning  'pct' is defined but never used             no-unused-vars
+  60:431  warning  'fuIds' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/main.js
+  97:37  warning  Duplicate key 'draw'  no-dupe-keys
+
+/home/claude/src/views/audit.js
+  5:10  warning  '$' is defined but never used      no-unused-vars
+  8:10  warning  'badge' is defined but never used  no-unused-vars
+
+/home/claude/src/views/campaigns.js
+    7:48  warning  'smsHref' is defined but never used        no-unused-vars
+   12:10  warning  'exportCsv' is defined but never used      no-unused-vars
+  162:9   warning  'camp' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/views/crm.js
+   1:10   warning  'closeDlg' is defined but never used      no-unused-vars
+   4:10   warning  'go' is defined but never used            no-unused-vars
+   7:10   warning  '$' is defined but never used             no-unused-vars
+  10:10   warning  'addToCrm' is defined but never used      no-unused-vars
+  10:49   warning  'crmExportDlg' is defined but never used  no-unused-vars
+  10:89   warning  'exportCrm' is defined but never used     no-unused-vars
+  10:121  warning  'stageMenu' is defined but never used     no-unused-vars
+  36:26   warning  'i' is defined but never used             no-unused-vars
+
+/home/claude/src/views/crmdash.js
+  9:22  warning  'crmExportDlg' is defined but never used  no-unused-vars
+  9:64  warning  'exportCrm' is defined but never used     no-unused-vars
+
+/home/claude/src/views/dashboard.js
+   2:10  warning  'go' is defined but never used             no-unused-vars
+   5:10  warning  '$' is defined but never used              no-unused-vars
+  49:9   warning  'hour' is assigned a value but never used  no-unused-vars
+
+/home/claude/src/views/deal.js
+   6:10   warning  '$' is defined but never used             no-unused-vars
+   8:10   warning  'badge' is defined but never used         no-unused-vars
+  10:125  warning  'moveDeal' is defined but never used      no-unused-vars
+  10:150  warning  'setDealField' is defined but never used  no-unused-vars
+  11:10   warning  'reassign' is defined but never used      no-unused-vars
+
+/home/claude/src/views/followups.js
+  4:10  warning  '$' is defined but never used             no-unused-vars
+  6:10  warning  'badge' is defined but never used         no-unused-vars
+  6:26  warning  'fuDone' is defined but never used        no-unused-vars
+  6:34  warning  'fuReschedule' is defined but never used  no-unused-vars
+  6:48  warning  'fuSnooze' is defined but never used      no-unused-vars
+  8:10  warning  'exportCsv' is defined but never used     no-unused-vars
+
+/home/claude/src/views/imports.js
+  8:10  warning  'badge' is defined but never used           no-unused-vars
+  9:10  warning  'downloadSample' is defined but never used  no-unused-vars
+  9:26  warning  'importCheck' is defined but never used     no-unused-vars
+  9:39  warning  'importRun' is defined but never used       no-unused-vars
+  9:50  warning  'undoImport' is defined but never used      no-unused-vars
+
+/home/claude/src/views/lead.js
+   4:10  warning  'go' is defined but never used             no-unused-vars
+   9:10  warning  '$' is defined but never used              no-unused-vars
+  11:79  warning  'fuDone' is defined but never used         no-unused-vars
+  11:87  warning  'fuReschedule' is defined but never used   no-unused-vars
+  14:10  warning  'addToCampaign' is defined but never used  no-unused-vars
+  14:25  warning  'addToList' is defined but never used      no-unused-vars
+  14:36  warning  'archiveLead' is defined but never used    no-unused-vars
+  14:62  warning  'reassign' is defined but never used       no-unused-vars
+
+/home/claude/src/views/leads.js
+   4:10  warning  'clearFilters' is defined but never used    no-unused-vars
+   4:24  warning  'go' is defined but never used              no-unused-vars
+   4:28  warning  'openInCallMode' is defined but never used  no-unused-vars
+   4:44  warning  'setF' is defined but never used            no-unused-vars
+   8:10  warning  '$' is defined but never used               no-unused-vars
+  12:10  warning  'exportCsv' is defined but never used       no-unused-vars
+  14:16  warning  'addToCampaign' is defined but never used   no-unused-vars
+  14:31  warning  'addToList' is defined but never used       no-unused-vars
+  14:42  warning  'archiveLead' is defined but never used     no-unused-vars
+  14:70  warning  'leadForm' is defined but never used        no-unused-vars
+  14:98  warning  'reassign' is defined but never used        no-unused-vars
+
+/home/claude/src/views/lists.js
+  10:43  warning  'reassign' is defined but never used  no-unused-vars
+
+/home/claude/src/views/login.js
+  3:25  warning  'changePasswordSubmit' is defined but never used  no-unused-vars
+  3:57  warning  'signIn' is defined but never used                no-unused-vars
+  3:65  warning  'signInWithPassword' is defined but never used    no-unused-vars
+  5:10  warning  '$' is defined but never used                     no-unused-vars
+  7:10  warning  'badge' is defined but never used                 no-unused-vars
+
+/home/claude/src/views/reports.js
+  4:10  warning  '$' is defined but never used          no-unused-vars
+  6:10  warning  'exportCsv' is defined but never used  no-unused-vars
+  8:10  warning  'draw' is defined but never used       no-unused-vars
+
+/home/claude/src/views/scoreboard.js
+   2:10  warning  'go' is defined but never used         no-unused-vars
+   5:10  warning  '$' is defined but never used          no-unused-vars
+   7:10  warning  'badge' is defined but never used      no-unused-vars
+   8:10  warning  'exportCsv' is defined but never used  no-unused-vars
+  10:10  warning  'draw' is defined but never used       no-unused-vars
+
+/home/claude/src/views/settings.js
+   2:114  warning  'defaultBuiltInFields' is defined but never used  no-unused-vars
+   4:10   warning  'go' is defined but never used                    no-unused-vars
+   8:13   warning  'copyText' is defined but never used              no-unused-vars
+  10:10   warning  'badge' is defined but never used                 no-unused-vars
+  10:17   warning  'outcome' is defined but never used               no-unused-vars
+  11:10   warning  'addStageDlg' is defined but never used           no-unused-vars
+  11:23   warning  'archivePipeline' is defined but never used       no-unused-vars
+  11:40   warning  'num' is defined but never used                   no-unused-vars
+  11:45   warning  'pipeline' is defined but never used              no-unused-vars
+  11:55   warning  'pipelineDlg' is defined but never used           no-unused-vars
+  11:68   warning  'restorePipeline' is defined but never used       no-unused-vars
+  11:85   warning  'restoreStage' is defined but never used          no-unused-vars
+  11:99   warning  'stageMenu' is defined but never used             no-unused-vars
+  12:10   warning  'exportCsv' is defined but never used             no-unused-vars
+
+/home/claude/src/views/shell.js
+  2:10  warning  'go' is defined but never used     no-unused-vars
+  4:19  warning  'audit' is defined but never used  no-unused-vars
+  6:10  warning  '$' is defined but never used      no-unused-vars
+
+/home/claude/src/views/workspace.js
+   8:10  warning  '$' is defined but never used             no-unused-vars
+   8:46  warning  'smsHref' is defined but never used       no-unused-vars
+  10:71  warning  'fuDone' is defined but never used        no-unused-vars
+  10:79  warning  'fuReschedule' is defined but never used  no-unused-vars
+
+/home/claude/tests/e2e/admin.spec.js
+   56:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  102:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  139:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+
+/home/claude/tests/e2e/backup-restore.spec.js
+  30:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  34:5  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+
+/home/claude/tests/e2e/crm.spec.js
+   74:11  warning  Avoid calling `expect` conditionally  playwright/no-conditional-expect
+  107:5   warning  Avoid calling `expect` conditionally  playwright/no-conditional-expect
+  128:11  warning  Avoid calling `expect` conditionally  playwright/no-conditional-expect
+
+/home/claude/tests/e2e/exports.spec.js
+  11:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  22:7  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  33:5  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+
+/home/claude/tests/e2e/helpers.js
+  14:9  warning  Unexpected use of page.waitForSelector()  playwright/no-wait-for-selector
+
+/home/claude/tests/e2e/imports.spec.js
+  47:27  warning  Use toHaveLength() instead  playwright/prefer-to-have-length
+  81:23  warning  Use toHaveLength() instead  playwright/prefer-to-have-length
+
+/home/claude/tests/e2e/negative-flows.spec.js
+  12:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+  55:9  warning  Prefer locator methods instead of page methods  playwright/prefer-locator
+
+/home/claude/tests/unit/export-crm-columns.test.js
+  41:11  warning  'nid' is assigned a value but never used  no-unused-vars
+
+/home/claude/tests/unit/list-to-campaign-promise.test.js
+  22:9  warning  'originalBackend' is assigned a value but never used  no-unused-vars
+
+/home/claude/tests/unit/stats.test.js
+  40:16  warning  'pace' is assigned a value but never used        no-unused-vars
+  40:32  warning  'weekRange' is assigned a value but never used   no-unused-vars
+  40:43  warning  'monthRange' is assigned a value but never used  no-unused-vars
+  55:9   warning  'who' is assigned a value but never used         no-unused-vars
+  55:76  warning  'm' is defined but never used                    no-unused-vars
+
+✖ 138 problems (0 errors, 138 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+
+
+---------------- STAGE 2: npm run test  = vitest run (exit 0) ----------------
+
+ RUN  v1.6.1 /home/claude
+
+stderr | tests/unit/import-dedupe-merge.test.js > imports.js — CSV parsing, row extraction, dedupe/merge (local backend) > DNC auto-flag (cfg.flagDnc) > after importRun(), a flagged row creates a lead with status "do_not_call" and dnc:true
+Not implemented: Window's scrollTo() method
+
+stderr | tests/unit/import-dedupe-merge.test.js > imports.js — CSV parsing, row extraction, dedupe/merge (local backend) > importRun() merge behavior > adds the import list id, appends a NEW phone (skipping one already present), and fills empty fields without overwriting set ones
+Not implemented: Window's scrollTo() method
+
+stderr | tests/unit/import-dedupe-merge.test.js > imports.js — CSV parsing, row extraction, dedupe/merge (local backend) > importRun() merge behavior > leaves an already-set field alone even when the import row has a different value for it
+Not implemented: Window's scrollTo() method
+
+stderr | tests/unit/import-dedupe-merge.test.js > imports.js — CSV parsing, row extraction, dedupe/merge (local backend) > undoImport() > removes a lead created by the import with no logged activity, and keeps one that already has activity
+Not implemented: Window's scrollTo() method
+
+ ✓ tests/unit/import-dedupe-merge.test.js  (31 tests) 1363ms
+NOTICE:  database "vitest_stage11_stats" does not exist, skipping
+ ✓ tests/unit/stats.test.js  (8 tests) 2619ms
+ ✓ tests/unit/negative-cases.test.js  (20 tests) 221ms
+NOTICE:  database "vitest_stage6_activity" does not exist, skipping
+ ✓ tests/unit/activity.test.js  (25 tests) 5424ms
+ ✓ tests/unit/dealmath.test.js  (28 tests) 9ms
+ ✓ tests/unit/permissions-matrix.test.js  (1130 tests) 115ms
+NOTICE:  database "vitest_dealmath_parity" does not exist, skipping
+ ✓ tests/unit/dealmath-parity.test.js  (14 tests) 456ms
+ ✓ tests/unit/util-datetime.test.js  (36 tests) 24ms
+ ✓ tests/unit/csv-escaping.test.js  (21 tests) 140ms
+stderr | tests/unit/dnc-cancels-followups-supabase.test.js > setDnc() — supabase backend cancels pending follow-ups on Do Not Contact > cancels every pending follow-up returned for the lead, leaves non-pending ones alone
+audit log: Cannot read properties of null (reading 'auth')
+
+ ✓ tests/unit/dnc-cancels-followups-supabase.test.js  (1 test) 174ms
+stderr | tests/unit/list-to-campaign-promise.test.js > listToCampaign() — supabase backend Promise handling > awaits the real count instead of stringifying a pending Promise into the toast
+Not implemented: Window's scrollTo() method
+
+ ✓ tests/unit/list-to-campaign-promise.test.js  (1 test) 185ms
+ ✓ tests/unit/crm-board-money-permission.test.js  (4 tests) 143ms
+ ✓ tests/unit/export-crm-columns.test.js  (1 test) 141ms
+ ✓ tests/unit/deal-money-permission.test.js  (2 tests) 174ms
+ ✓ tests/unit/visible-leads.test.js  (1 test) 129ms
+ ✓ tests/unit/demo-banner-gating.test.js  (1 test) 124ms
+ ✓ tests/unit/shell-demo-banner-gating.test.js  (1 test) 192ms
+ ✓ tests/unit/styles-hidden.test.js  (1 test) 3ms
+ ✓ tests/unit/demo-banner-gating-off.test.js  (1 test) 140ms
+ ✓ tests/unit/shell-demo-banner-gating-supabase.test.js  (1 test) 172ms
+
+ Test Files  20 passed (20)
+      Tests  1328 passed (1328)
+   Start at  18:36:13
+   Duration  38.16s (transform 2.10s, setup 1ms, collect 2.32s, tests 11.95s, environment 17.28s, prepare 2.04s)
+
+
+---------------- STAGE 3: npm run test:e2e = playwright test --workers=2 (exit 0) ----------------
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 92 tests using 2 workers
+
+  ✓   2 [chromium] › tests/e2e/activity-and-followups.spec.js:29:1 › marking a follow-up done removes it from the pending list (2.1s)
+  ✓   1 [chromium] › tests/e2e/activity-and-followups.spec.js:11:1 › logging a call attempt records an activity and clears the save button (2.4s)
+  ✓   3 [chromium] › tests/e2e/admin.spec.js:11:1 › admin creates a user, who must change their password on first sign-in (2.7s)
+  ✓   4 [chromium] › tests/e2e/admin.spec.js:53:1 › owner edits and saves permissions for a role (2.6s)
+  ✓   5 [chromium] › tests/e2e/admin.spec.js:97:1 › owner creates a team from the Teams tab (1.8s)
+  ✓   6 [chromium] › tests/e2e/admin.spec.js:125:1 › owner changes a member's role from the Users tab (2.1s)
+  ✓   7 [chromium] › tests/e2e/auth-and-leads.spec.js:6:3 › login › demo one-click login lands on the dashboard (1.2s)
+  ✓   8 [chromium] › tests/e2e/auth-and-leads.spec.js:14:3 › login › email + password sign-in works for a seeded user (1.6s)
+  ✓   9 [chromium] › tests/e2e/auth-and-leads.spec.js:22:3 › login › wrong password is rejected with an inline message (1.6s)
+  ✓  10 [chromium] › tests/e2e/auth-and-leads.spec.js:35:3 › create lead › agent can create a new lead from the Leads screen (2.2s)
+  ✓  11 [chromium] › tests/e2e/auth-and-leads.spec.js:57:3 › create lead › a duplicate phone number is rejected (2.0s)
+  ✓  12 [chromium] › tests/e2e/backup-restore.spec.js:27:1 › a downloaded backup can restore the database to its earlier state (2.3s)
+  ✓  13 [chromium] › tests/e2e/campaigns.spec.js:16:1 › sending a campaign text then logging a reply updates the card status (2.6s)
+  ✓  14 [chromium] › tests/e2e/campaigns.spec.js:81:1 › full lifecycle: draft to ready to sent to replied (3.2s)
+  ✓  15 [chromium] › tests/e2e/crm.spec.js:10:1 › add to CRM, drag to a new stage, and edit price (3.2s)
+  ✓  16 [chromium] › tests/e2e/dashboards.spec.js:17:1 › dashboard (Welcome back) shows the weekly KPI cards (1.4s)
+  ✓  17 [chromium] › tests/e2e/dashboards.spec.js:28:1 › reports shows the per-caller performance table (1.3s)
+  ✓  18 [chromium] › tests/e2e/dashboards.spec.js:38:1 › scoreboard shows ranked members with points (1.4s)
+  ✓  19 [chromium] › tests/e2e/dashboards.spec.js:48:1 › CRM dashboard shows the pipeline KPI cards (1.2s)
+  ✓  20 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Leads" downloads a non-empty CSV (1.7s)
+  ✓  21 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Assignments" downloads a non-empty CSV (1.6s)
+  ✓  22 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Activities" downloads a non-empty CSV (1.4s)
+  ✓  23 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Outcomes" downloads a non-empty CSV (1.5s)
+  ✓  25 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Follow-ups" downloads a non-empty CSV (1.3s)
+  ✓  24 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Notes" downloads a non-empty CSV (1.8s)
+  ✓  26 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Campaigns" downloads a non-empty CSV (1.5s)
+  ✓  27 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Team performance" downloads a non-empty CSV (1.7s)
+  ✓  28 [chromium] › tests/e2e/exports.spec.js:19:3 › "⇩ Scoreboard" downloads a non-empty CSV (1.4s)
+  ✓  29 [chromium] › tests/e2e/exports.spec.js:30:1 › "Save backup" downloads a valid JSON snapshot of the whole database (1.5s)
+  ✓  30 [chromium] › tests/e2e/imports.spec.js:26:1 › importing a CSV adds its rows as new leads (1.6s)
+  ✓  31 [chromium] › tests/e2e/imports.spec.js:61:1 › a duplicate row is detected and shown on the Check duplicates screen, not silently imported (2.0s)
+  ✓  32 [chromium] › tests/e2e/imports.spec.js:96:1 › choosing "merge" for a duplicate row merges it into the existing lead instead of creating a new one (1.8s)
+  ✓  33 [chromium] › tests/e2e/imports.spec.js:130:1 › undo removes a freshly-imported lead but keeps one with logged activity (2.3s)
+  ✓  34 [chromium] › tests/e2e/leads-dnc-notes.spec.js:14:3 › lead edit, DNC and notes › agent can edit an existing lead and the change persists (2.5s)
+  ✓  35 [chromium] › tests/e2e/leads-dnc-notes.spec.js:45:3 › lead edit, DNC and notes › marking Do Not Call flips dnc/status; Do Not Contact additionally cancels pending follow-ups (1.8s)
+  ✓  36 [chromium] › tests/e2e/leads-dnc-notes.spec.js:95:3 › lead edit, DNC and notes › adding a note appends it to window.db.notes and renders on the page (2.0s)
+  ✓  37 [chromium] › tests/e2e/leads-dnc-notes.spec.js:117:3 › create a list › manager can create a new prospecting list (1.7s)
+  ✓  38 [chromium] › tests/e2e/negative-flows.spec.js:9:1 › leaving the New user dialog blank is rejected and creates nobody (1.8s)
+  ✓  39 [chromium] › tests/e2e/negative-flows.spec.js:30:1 › leaving both name fields blank on a new lead is rejected (1.6s)
+  ✓  41 [chromium] › tests/e2e/negative-flows.spec.js:80:1 › a malformed (too-short) CSV upload is rejected without crashing the app (1.6s)
+  ✓  40 [chromium] › tests/e2e/negative-flows.spec.js:52:1 › a duplicate email (case-varied) is rejected and only one member is created (2.4s)
+  ✓  42 [chromium] › tests/e2e/negative-flows.spec.js:106:1 › a CSV with unrecognized headers maps every column to Skip without crashing (1.4s)
+  ✓  43 [chromium] › tests/e2e/negative-flows.spec.js:141:1 › an "expired session" lands back on the login screen (1.5s)
+#leads first render with 10,000 leads: 231.2ms
+  ✓  44 [chromium] › tests/e2e/performance.spec.js:14:1 › renders 10,000 leads under 1.5s (2.0s)
+#crm first render with 2,000 deals: 1084.6ms
+typing a 15-char query over 10,000 leads took 4297ms wall-clock
+  ✓  46 [chromium] › tests/e2e/performance.spec.js:96:1 › search input stays responsive with 10,000 leads loaded (5.9s)
+  ✓  45 [chromium] › tests/e2e/performance.spec.js:49:1 › renders 2,000 deals under 1.5s (7.5s)
+  ✓  47 [mobile] › tests/e2e/activity-and-followups.spec.js:29:1 › marking a follow-up done removes it from the pending list (12.3s)
+  ✓  48 [mobile] › tests/e2e/activity-and-followups.spec.js:11:1 › logging a call attempt records an activity and clears the save button (12.8s)
+  ✓  49 [mobile] › tests/e2e/admin.spec.js:11:1 › admin creates a user, who must change their password on first sign-in (12.2s)
+  ✓  50 [mobile] › tests/e2e/admin.spec.js:53:1 › owner edits and saves permissions for a role (12.1s)
+  ✓  51 [mobile] › tests/e2e/admin.spec.js:97:1 › owner creates a team from the Teams tab (11.7s)
+  ✓  52 [mobile] › tests/e2e/admin.spec.js:125:1 › owner changes a member's role from the Users tab (11.8s)
+  ✓  54 [mobile] › tests/e2e/auth-and-leads.spec.js:14:3 › login › email + password sign-in works for a seeded user (1.3s)
+  ✓  55 [mobile] › tests/e2e/auth-and-leads.spec.js:22:3 › login › wrong password is rejected with an inline message (1.1s)
+  ✓  53 [mobile] › tests/e2e/auth-and-leads.spec.js:6:3 › login › demo one-click login lands on the dashboard (11.1s)
+  ✓  56 [mobile] › tests/e2e/auth-and-leads.spec.js:35:3 › create lead › agent can create a new lead from the Leads screen (11.3s)
+  ✓  57 [mobile] › tests/e2e/auth-and-leads.spec.js:57:3 › create lead › a duplicate phone number is rejected (11.4s)
+  ✓  58 [mobile] › tests/e2e/backup-restore.spec.js:27:1 › a downloaded backup can restore the database to its earlier state (11.4s)
+  ✓  59 [mobile] › tests/e2e/campaigns.spec.js:16:1 › sending a campaign text then logging a reply updates the card status (12.0s)
+  ✓  61 [mobile] › tests/e2e/crm.spec.js:10:1 › add to CRM, drag to a new stage, and edit price (11.9s)
+  ✓  60 [mobile] › tests/e2e/campaigns.spec.js:81:1 › full lifecycle: draft to ready to sent to replied (22.6s)
+  ✓  62 [mobile] › tests/e2e/dashboards.spec.js:17:1 › dashboard (Welcome back) shows the weekly KPI cards (11.2s)
+  ✓  63 [mobile] › tests/e2e/dashboards.spec.js:28:1 › reports shows the per-caller performance table (11.0s)
+  ✓  64 [mobile] › tests/e2e/dashboards.spec.js:38:1 › scoreboard shows ranked members with points (10.9s)
+  ✓  65 [mobile] › tests/e2e/dashboards.spec.js:48:1 › CRM dashboard shows the pipeline KPI cards (11.0s)
+  ✓  66 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Leads" downloads a non-empty CSV (11.2s)
+  ✓  67 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Assignments" downloads a non-empty CSV (11.2s)
+  ✓  68 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Activities" downloads a non-empty CSV (11.2s)
+  ✓  69 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Outcomes" downloads a non-empty CSV (11.2s)
+  ✓  70 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Notes" downloads a non-empty CSV (11.1s)
+  ✓  71 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Follow-ups" downloads a non-empty CSV (11.0s)
+  ✓  72 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Campaigns" downloads a non-empty CSV (11.0s)
+  ✓  73 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Team performance" downloads a non-empty CSV (11.1s)
+  ✓  74 [mobile] › tests/e2e/exports.spec.js:19:3 › "⇩ Scoreboard" downloads a non-empty CSV (11.0s)
+  ✓  75 [mobile] › tests/e2e/exports.spec.js:30:1 › "Save backup" downloads a valid JSON snapshot of the whole database (11.2s)
+  ✓  76 [mobile] › tests/e2e/imports.spec.js:26:1 › importing a CSV adds its rows as new leads (11.3s)
+  ✓  77 [mobile] › tests/e2e/imports.spec.js:61:1 › a duplicate row is detected and shown on the Check duplicates screen, not silently imported (11.3s)
+  ✓  78 [mobile] › tests/e2e/imports.spec.js:96:1 › choosing "merge" for a duplicate row merges it into the existing lead instead of creating a new one (11.2s)
+  ✓  79 [mobile] › tests/e2e/imports.spec.js:130:1 › undo removes a freshly-imported lead but keeps one with logged activity (11.8s)
+  ✓  80 [mobile] › tests/e2e/leads-dnc-notes.spec.js:14:3 › lead edit, DNC and notes › agent can edit an existing lead and the change persists (11.3s)
+  ✓  81 [mobile] › tests/e2e/leads-dnc-notes.spec.js:45:3 › lead edit, DNC and notes › marking Do Not Call flips dnc/status; Do Not Contact additionally cancels pending follow-ups (11.3s)
+  ✓  82 [mobile] › tests/e2e/leads-dnc-notes.spec.js:95:3 › lead edit, DNC and notes › adding a note appends it to window.db.notes and renders on the page (11.3s)
+  ✓  83 [mobile] › tests/e2e/leads-dnc-notes.spec.js:117:3 › create a list › manager can create a new prospecting list (11.1s)
+  ✓  84 [mobile] › tests/e2e/negative-flows.spec.js:9:1 › leaving the New user dialog blank is rejected and creates nobody (11.4s)
+  ✓  85 [mobile] › tests/e2e/negative-flows.spec.js:30:1 › leaving both name fields blank on a new lead is rejected (11.4s)
+  ✓  86 [mobile] › tests/e2e/negative-flows.spec.js:52:1 › a duplicate email (case-varied) is rejected and only one member is created (11.8s)
+  ✓  87 [mobile] › tests/e2e/negative-flows.spec.js:80:1 › a malformed (too-short) CSV upload is rejected without crashing the app (11.1s)
+  ✓  88 [mobile] › tests/e2e/negative-flows.spec.js:106:1 › a CSV with unrecognized headers maps every column to Skip without crashing (11.1s)
+  ✓  89 [mobile] › tests/e2e/negative-flows.spec.js:141:1 › an "expired session" lands back on the login screen (10.9s)
+#leads first render with 10,000 leads: 129.4ms
+  ✓  90 [mobile] › tests/e2e/performance.spec.js:14:1 › renders 10,000 leads under 1.5s (11.4s)
+#crm first render with 2,000 deals: 715.0ms
+  ✓  91 [mobile] › tests/e2e/performance.spec.js:49:1 › renders 2,000 deals under 1.5s (13.5s)
+typing a 15-char query over 10,000 leads took 4284ms wall-clock
+  ✓  92 [mobile] › tests/e2e/performance.spec.js:96:1 › search input stays responsive with 10,000 leads loaded (15.4s)
+
+  92 passed (5.4m)

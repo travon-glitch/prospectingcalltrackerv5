@@ -1,0 +1,29 @@
+# Stage 15: minimal config so `supabase start` / `supabase db lint` have a
+# project to run migrations against in CI (.github/workflows/ci.yml).
+# Not needed for `npm run dev` against a real hosted Supabase project (see
+# .env.example) — this file only matters for the local CLI stack.
+project_id = "prospecting-call-tracker"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = []
+jwt_expiry = 3600
+enable_signup = false
+
+[storage]
+enabled = false
